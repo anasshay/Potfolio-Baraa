@@ -1,0 +1,164 @@
+:root {
+  --h1-font-size: 32px;
+  --h2-font-size: 26px;
+  --p-font-size: 16px;
+  --p-font-family: "Montserrat", sans-serif;
+  --headings-font-family: "Open Sans", sans-serif;
+  --bk-color: #1d1d1d;
+  --primary-color: #242423; /*the primary color*/
+  --secondary-color: #fca311; /*secondary color*/
+  --text-color: #e5e5e5; /*text color*/
+  --extra-color: #7f7f7f; /*extra color maybe*/
+}
+
+html {
+  height: fit-content;
+  background-color: #000000ea;
+  /* background-image: url("./bk.png");
+  background-size: contain;
+  background-blend-mode: multiply;
+  background-repeat: repeat; */
+  scroll-behavior: smooth;
+}
+
+#root {
+  height: inherit;
+}
+
+p {
+  font-size: var(--p-font-size);
+  font-family: var(--p-font-family);
+}
+
+body {
+  letter-spacing: 1px;
+  margin: 0;
+  color: var(--text-color);
+  height: inherit;
+}
+
+.App {
+  padding: 2rem 0 0 0;
+  height: inherit;
+}
+
+h1 {
+  margin-bottom: 15px;
+  font-size: var(--h1-font-size);
+}
+h2 {
+  font-size: var(--h2-font-size);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--headings-font-family);
+}
+
+hr {
+  margin: 30px auto;
+  width: 70%;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#loading {
+position: absolute;
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.loader {
+  border: 16px solid var(--extra-color);
+  border-radius: 50%;
+  border-top: 16px solid var(--secondary-color);
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+.loader1 {
+  border: 16px solid var(--extra-color);
+  border-radius: 50%;
+  border-top: 16px solid var(--secondary-color);
+  width: 10px;
+  height: 10px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+#loading-message {
+  margin-left: 10vw;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.main-sections {
+  margin-left: 22rem;
+  margin-right: 80px;
+}
+.codebar {
+  display: none;
+}
+
+.main-h1 hr {
+  margin: 10px auto;
+  width: 100px;
+  border: 2px solid var(--secondary-color);
+  background-color: var(--secondary-color);
+}
+
+@media (max-width: 780px) {
+  .main-sections {
+    margin-top: 2rem;
+    margin-left: 5rem;
+    margin-right: 3rem;
+    text-align: justify;
+  }
+  .codebar {
+    display: initial;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    background-color: rgba(36, 36, 35, 0.8);
+    padding: 5px 10px;
+    border-radius: 0 10px 10px 10px;
+  }
+  .navbar {
+    transform: translateX(-100%);
+    transition: 0.5s ease;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    height: 120% !important;
+  }
+}
+
+@media (min-width: 780px) {
+  .sections {
+    min-height: 100vh;
+  }
+  .last-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,140 @@
+.about-me-section {
+  min-height: calc(100vh - 40px);
+  position: relative;
+  padding-top: 2rem;
+}
+
+.arrow-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+.arrow-icon1 {
+  position: absolute;
+  color: var(--secondary-color);
+  left: -55px;
+  bottom: 0;
+  animation: MoveUpDown 1s linear infinite;
+}
+.arrow-icon2 {
+  position: absolute;
+  color: var(--secondary-color);
+  right: -60px;
+  bottom: 8vh;
+  animation: MoveUpDown 1s linear infinite;
+}
+
+.before1::after {
+  font-size: 12px;
+  content: "Scroll down";
+  color: var(--secondary-color);
+  position: absolute;
+  left: -50px;
+  transform: translateY(-20px) rotate(90deg);
+  animation: MoveUpDown 1s linear infinite;
+}
+.before2::after {
+  font-size: 12px;
+  content: "Scroll down";
+  color: var(--secondary-color);
+  position: absolute;
+  right: -55px;
+  transform: translateY(-20px) rotate(90deg);
+  animation: MoveUpDown 1s linear infinite;
+}
+
+.allpart1 {
+  display: flex;
+  justify-content: space-between;
+}
+.title h1 {
+  text-align: center;
+}
+.imgbaraa img {
+  width: 200px;
+  height: 210px;
+  margin-left: 34px;
+  border-radius: 29px;
+}
+.descriptionbaraa h2 {
+  margin-top: 30px;
+}
+.descriptionbaraa p {
+  margin-top: 25px;
+  max-width: 659px;
+  font-size: 15px;
+  line-height: 2;
+  /* color: white; */
+}
+
+.firstp {
+  margin-top: 35px;
+}
+.secondp {
+  margin-top: 25px;
+}
+
+@media (max-width: 1000px) {
+  .imgbaraa img {
+    display: none;
+  }
+}
+
+@media (max-width: 780px) {
+  .about-me-section{ 
+    padding: 0;
+  }
+  .arrow-icon2,
+  .before2::after {
+    display: none;
+  }
+
+  .arrow-icon1, .before1::after {
+    animation: MoveUpDownMobile 1s linear infinite;
+  }
+
+  .all {
+    width: 100%;
+  }
+  .descriptionbaraa p {
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0;
+  }
+  .firstp {
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+  }
+  .secondp {
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0;
+  }
+  .descriptionbaraa h2 {
+    font-size: 20px;
+    letter-spacing: 0;
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    bottom: 12vh;
+  }
+  50% {
+    bottom: 9vh;
+  }
+}
+@keyframes MoveUpDownMobile {
+  0%,
+  100% {
+    bottom: 21vh;
+  }
+  50% {
+    bottom: 18vh;
+  }
+}

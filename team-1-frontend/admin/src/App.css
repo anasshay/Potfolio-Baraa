@@ -1,0 +1,89 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+  background-color: #202124;
+}
+
+.about-me, .experiences, .messages, .projects, .skills, .social-media {
+  margin-left: 320px;
+  padding-top: 2.5rem;
+  color: #dfdfdf;
+}
+
+/* sidebar */
+
+.sidebar{
+  height: 100%;
+  width: 280px;
+  background-color: #2F4050;
+  position: fixed;
+}
+
+.sidebarList{
+  height: auto;
+  width: 100%;
+}
+
+.greeting {  
+  box-sizing: border-box;
+  width: 100%;
+  padding: 25px;
+  font-size: 35px;
+  color: #dfdfdf;
+  font-family: 'Itim', cursive;
+  font-weight: 900;
+}
+
+.sidebarList .row {
+  list-style-type: none;
+  flex-direction: row;
+  font-weight: 600;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.link {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.sidebarList .row:hover {
+  cursor: pointer;
+  background-color: #293846;
+}
+
+.active {
+  background-color: #293846;
+}
+
+.row #icon {
+  flex: 30%;
+  display: grid;
+  place-items: center;
+}
+
+.row #title {
+  flex: 70%;
+}
+@media (max-width: 768px) {
+  #title {
+    display: none;
+  }
+  .greeting {
+    display: none;
+  }
+  .sidebar {
+    width: 80px;
+  }
+  .about-me, .experiences, .messages, .projects, .skills, .social-media {
+    margin-left: 120px;
+  }
+}

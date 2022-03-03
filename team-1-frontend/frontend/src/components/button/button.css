@@ -1,0 +1,54 @@
+.cta {
+  font-family: "Open Sans", sans-serif;
+  position: relative;
+  margin: auto;
+  padding: 19px 40px;
+  transition: all 0.2s ease;
+  /* color: var(--secondary-color); */
+}
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  left: 0;
+  display: block;
+  border-radius: 20px;
+  background: #fff;
+  width: 0px;
+  height: 30px;
+  transition: all 0.4s ease;
+}
+.cta span {
+  position: relative;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 900;
+  vertical-align: middle;
+}
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #e5e5e5;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.5s ease;
+}
+.cta:hover:before {
+  width: 100%;
+  background: #fff;
+}
+.cta:hover svg {
+  transform: translateX(0);
+}
+.cta:active {
+  transform: scale(0.96);
+}
+.secrtion-div {
+    margin-bottom: 20px;
+}
+

@@ -1,0 +1,6 @@
+# team-1/.env
+node_modules
+team-1/node_modules
+# team-1/images
+team-1-frontend/admin/node_modules
+team-1-frontend/frontend/node_modules

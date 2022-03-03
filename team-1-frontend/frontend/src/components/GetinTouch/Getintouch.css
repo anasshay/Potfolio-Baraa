@@ -1,0 +1,102 @@
+.getintouch {
+  display: flex;
+  justify-content: center;
+  margin-left: 20px;
+  flex-wrap: wrap;
+}
+
+.title h1 {
+  text-align: center;
+}
+
+
+.contact-container {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.left-container,
+.right-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-container form {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 5vw;
+}
+.left-container input,
+.right-container textarea {
+  display: block;
+  margin-top: 5px;
+}
+.left-container label,
+.right-container label {
+  margin-bottom: 15px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.right-container input {
+  font-family: "Open Sans", sans-serif;
+  width: fit-content;
+  margin: auto;
+  background-color: var(--extra-color);
+  color: white;
+  border-radius: 5px;
+  padding: 7px 20px;
+  margin-top: 32px;
+  -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+    5px 5px 15px 5px rgba(204, 204, 204, 0);
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+    5px 5px 15px 5px rgba(204, 204, 204, 0);
+}
+
+.left-container input {
+  padding: 8px;
+  background-color: var(--extra-color);
+  color: black;
+  border: 1px solid white;
+  width: 300px;
+  margin-top: 8px;
+  -webkit-box-shadow: inset -1px 3px 8px 5px gray, 2px 5px 16px 0px black,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: inset -1px 3px 8px 5px gray, 2px 5px 16px 0px black,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.right-container textarea {
+  background-color: var(--extra-color);
+  color: black;
+  border: 1px solid white;
+  height: 118px;
+  margin-top: 8px;
+  overflow: hidden;
+  -webkit-box-shadow: inset -1px 3px 8px 5px gray, 2px 5px 16px 0px black,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: inset -1px 3px 8px 5px gray, 2px 5px 16px 0px black,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+@media (max-width: 780px) {
+  .contact-container form {
+    gap: 2rem;
+  }
+}
+@media (max-width: 400px) {
+  .right-container textarea, .left-container input  {
+    width: 70vw;
+  }
+}
+
+#message {
+  color: green;
+  display: none;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.show-message {
+  display: block !important;
+}

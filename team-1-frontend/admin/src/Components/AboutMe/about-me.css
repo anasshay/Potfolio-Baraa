@@ -1,0 +1,51 @@
+
+.wrapper {
+    font-size: 1.5rem;
+    padding: 10px;
+    display: flex;
+}
+
+.photo {
+    text-align: center;
+    flex:0.5;
+    width: 15rem;
+    border: 1px solid;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+}
+.name {
+    width: fit-content;
+    border: 1px solid;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.content {
+    margin-top: 3rem;
+    border: 1px solid;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    width: fit-content;
+}
+
+.field {
+    padding: 3px 10px;
+    margin-bottom: 10px;
+    height: 30px;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+.button {
+    padding: 5px;
+}
+
+@media (max-width:768px) {
+    .wrapper{
+        flex-direction: column;
+        gap:30px ;
+    }
+}

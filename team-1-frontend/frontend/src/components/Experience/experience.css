@@ -1,0 +1,44 @@
+.experience {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 600px ;
+    margin: auto;
+}
+.experience img{
+    width: 100px;
+}
+
+.experiences h1 {
+    text-align: center;
+}
+
+.experience-item {
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+
+.experience-text h4{
+    margin-top: 10px;
+}
+
+.experience-photo {
+    text-align: center;
+}
+
+@media (max-width: 780px) {
+    .experience {
+        flex-direction: column;
+    }
+    .experiences h1 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    .experience-item{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+}

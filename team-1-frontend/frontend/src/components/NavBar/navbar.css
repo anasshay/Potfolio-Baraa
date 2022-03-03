@@ -1,0 +1,106 @@
+:root {
+  --primary-color: #242423; /*the primary color*/
+  --secondary-color: #fca311; /*secondary color*/
+  --text-color: #e5e5e5; /*text color*/
+  --extra-color: #7f7f7f; /*extra color */
+}
+
+.codebar {
+  padding: 15px;
+}
+
+.navbar {
+  width: 18rem;
+  height: 100vh;
+  background-color: #0c0c0c ;
+  text-align: center;
+  padding-top: 10px;
+  position: fixed;
+  top: 0;
+  color: var(--text-color);
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  z-index: 1000;
+  border-right: 2px solid;
+  border-color: var(--secondary-color);
+}
+.navbar::-webkit-scrollbar {
+  display: none; /* hide the scroll bar in the navbar*/
+}
+
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  max-width: 100%;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+
+.navbar a:hover {
+  color: #f84600;
+  transition: ease-out 0.4s;
+}
+
+.nav-sections {
+  margin-top: 30px;
+}
+.social-media {
+  /* background-color: #aaa; */
+  height: 30px;
+  width: 70%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 7px;
+}
+.social-media a {
+  height: 30px;
+  width: 30px;
+  margin-top: 10px;
+}
+
+.social-media img {
+  width: 100%;
+}
+
+.copyrights {
+  font-size: 12px !important; 
+  opacity: 0.5;
+  margin-bottom: 30px;
+  color: var(--secondary-color);
+}
+
+.copyrights span {
+  font-family : var(--p-font-family);
+  font-size: 13px;
+}
+
+.close {
+  display: none;
+  position: absolute;
+  right: 5%;
+  background-color: transparent;
+  color: var(--text-color);
+}
+.close:hover {
+  color: var(--secondary-color);
+  transition: ease 0.3s;
+}
+.open {
+  display: inline-block;
+  transform: translateX(0);
+  transition: 0.5s ease;
+}
+
+.nav-btn {
+  border: none;
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  padding: 5px;
+  transition: all 0.5s;
+}

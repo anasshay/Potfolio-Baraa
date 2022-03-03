@@ -1,0 +1,46 @@
+.exp-page-wrapper {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.current-exp {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    border: solid 1px;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 10px;
+}
+
+.exp-page-wrapper img {
+    margin: 1rem;
+}
+
+.exp-page-wrapper input {
+    padding: 5px;
+    margin: 0.5rem;
+}
+
+.add-exp {
+    margin: 1rem 0;
+    border: solid 1px;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 10px;
+}
+
+
+#add-btn, .date-from, .date-to {
+    display: block;
+}
+
+.date-from, .date-to {
+    margin-left: 0.5rem;
+}
+
+.exp-container{
+    border: 1px solid #fff;
+    margin: 10px;
+}
