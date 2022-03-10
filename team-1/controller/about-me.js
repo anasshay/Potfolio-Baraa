@@ -4,8 +4,17 @@ class Controller {
   // callback functions used in routes
   get(req, res, next) {
     AboutMe.find({}, (err, response) => {
-      if (err) return next(err);
-      res.status(200).send({ success: true, response });
+      if (response.length == 0) {
+        let newContent = new AboutMe({
+          name: "undefined",
+          description: "undefined",
+          content: "undefined",
+        });
+        newContent.save();
+      } else {
+        if (err) return next(err);
+        res.status(200).send({ success: true, response });
+      }
     });
   }
 
@@ -21,15 +30,16 @@ class Controller {
   edit(req, res, next) {
     let content = req.body;
     AboutMe.find({}, (err, response) => {
-      if (response.length == 0) {
-        let newContent = new AboutMe({
-          name: "undefined",
-          description: "undefined",
-          content: "undefined",
-        });
-        newContent.save();
-      }
-      else {
+//       if (response.length == 0) {
+//         let newContent = new AboutMe({
+//           name: "undefined",
+//           description: "undefined",
+//           content: "undefined",
+//         });
+//         newContent.save();
+//       }
+//       else
+      {
         let aboutMeId = response[0]._id;
         AboutMe.updateOne(
           { _id: aboutMeId },
