@@ -19,12 +19,12 @@ function App() {
   });
   const [loading, setLoading] = useState(true);
   const getData = async () => {
-    const social = await axios.get("/social-media");
-    const user = await axios.get("/user");
-    const aboutMe = await axios.get("/aboutme");
-    const skillsData = await axios.get("/skills");
-    const experiencesData = await axios.get("/experiences");
-    const projectsData = await axios.get("/projects");
+    const aboutMe = await axios.get("aboutme.json");
+    const social = await axios.get("socialmedia.json");
+    const user = await axios.get("user.json");
+    const skillsData = await axios.get("skills.json");
+    const experiencesData = await axios.get("experiences.json");
+    const projectsData = await axios.get("projects.json");
     try {
       setData({
         social: social.data.response,
@@ -44,10 +44,8 @@ function App() {
     getData();
   }, []);
 
-
   return (
     <div className="App">
-
       {loading && (
         <div id="loading">
           <div className="loader"></div>
