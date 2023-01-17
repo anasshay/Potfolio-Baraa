@@ -7,12 +7,12 @@ const mongoose = require("mongoose");
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var userRouter = require("./routes/user");
-var aboutMeRouter = require('./routes/about-me');
-var experiencesRouter = require('./routes/experiences');
-var projectsRouter = require('./routes/projects');
-var skillsRouter = require('./routes/skills');
-var socialMediaRouter = require('./routes/social-media');
-var uploadRouter = require('./routes/upload');
+var aboutMeRouter = require("./routes/about-me");
+var experiencesRouter = require("./routes/experiences");
+var projectsRouter = require("./routes/projects");
+var skillsRouter = require("./routes/skills");
+var socialMediaRouter = require("./routes/social-media");
+var uploadRouter = require("./routes/upload");
 
 var app = express();
 
@@ -20,7 +20,6 @@ require("dotenv").config();
 var cors = require("cors");
 var favicon = require("serve-favicon");
 const session = require("express-session");
-
 
 mongoose.connect(process.env.DB_URL, { useNewUrlParser: true });
 const db = mongoose.connection;
@@ -42,18 +41,17 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 // app.use(express.static("public"));
-app.use('/images', express.static('images'))
-
+app.use("/images", express.static("images"));
 
 app.use("/", indexRouter);
-app.use('/upload', uploadRouter)
+app.use("/upload", uploadRouter);
 app.use("/users", usersRouter);
 app.use("/user", userRouter);
 app.use("/aboutme", aboutMeRouter);
-app.use("/experiences", experiencesRouter)
-app.use("/projects", projectsRouter)
-app.use("/skills", skillsRouter)
-app.use("/social-media", socialMediaRouter)
+app.use("/experiences", experiencesRouter);
+app.use("/projects", projectsRouter);
+app.use("/skills", skillsRouter);
+app.use("/social-media", socialMediaRouter);
 
 // create and error object,catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -65,11 +63,8 @@ app.use(function (req, res, next) {
 app.use(function (err, req, res, next) {
   res.status(err.status || 500).send({
     success: false,
-    message: err.message
+    message: err.message,
   });
 });
-
-
-
 
 module.exports = app;
